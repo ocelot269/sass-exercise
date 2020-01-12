@@ -1,0 +1,292 @@
+/*Sass*/
+@use 'mobile';
+
+/*variables*/
+
+$center: center;
+$tamanoLetra: 14px;
+
+%underline-decorator {
+    text-decoration: underline;
+}
+
+%none-decorator {
+    text-decoration: none;
+}
+
+@mixin marginPanding($size) {
+    @if $size <=0 {
+        margin: 0;
+        padding: 0;
+    }
+
+    @else {
+        margin: $size;
+        padding: $size;
+    }
+}
+
+@mixin color($color) {
+    color: $color;
+}
+
+%font-weight {
+    font-weight: normal;
+}
+
+body {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    /* extend */
+    font-size: $tamanoLetra;
+    /* extend */
+    @extend %font-weight;
+    line-height: 1;
+    min-width: 960px;
+    /*mixins*/
+    @include marginPanding(0px);
+}
+
+p {
+    /*mixins*/
+    @include color(#252525);
+    line-height: 24px;
+    /*mixins*/
+    @include marginPanding(0px);
+
+    a {
+        /*mixins*/
+        @include color(#252525);
+        /*extends*/
+        @extend %underline-decorator;
+
+        &:hover {
+            /*mixins*/
+            @include color(#898989);
+        }
+    }
+}
+
+#header {
+    margin: 0 auto;
+    padding: 44px 0 50px;
+    /*variable*/
+    text-align: $center;
+    width: 960px;
+
+    a {
+        &.logo {
+            display: block;
+            /* mixins*/
+            @include marginPanding(0px);
+            margin: auto;
+            width: 340px;
+
+            img {
+                border: 0;
+                display: block;
+                /* mixins*/
+                @include marginPanding(0px);
+            }
+        }
+    }
+
+    ul {
+        margin: 0;
+        padding: 56px 0 0;
+
+        li {
+            display: inline;
+            list-style: none;
+            margin: 0;
+            padding: 0 19px;
+
+            &.selected {
+                a {
+                    /*mixing*/
+                    @include color(#0ba39c);
+                }
+            }
+
+            a {
+                /*mixing*/
+                @include color(#252525);
+                display: inline-block;
+                font-family: "Arial Black", Gadget, sans-serif;
+                /* variable */
+                font-size: $tamanoLetra;
+                /* extends */
+                @extend %font-weight;
+                margin: 0;
+                padding: 0 0 3px;
+                /* extends */
+                @extend %none-decorator;
+                text-transform: uppercase;
+
+                &:hover {
+                    color: #0ba39c;
+                }
+            }
+        }
+    }
+
+    #body {
+        margin: 0;
+        padding: 0 0 30px;
+        /*variable*/
+        text-align: $center;
+
+        h1 {
+            /* mixins */
+            @include color(#fff);
+            display: inline;
+            font-family: poller_oneregular;
+            /*operator*/
+            font-size: 1 * 35px;
+            font-weight: normal;
+            margin: 0;
+            padding: 0;
+            text-transform: uppercase;
+
+            span {
+                background: #252525;
+                display: inline-block;
+                padding: 15px 28px 12px;
+            }
+        }
+
+        >div {
+            margin: 0 auto;
+            padding: 0;
+            width: 960px;
+
+            img {
+                border: 2px solid #292929;
+                margin: 24px 0 0;
+                padding: 0;
+            }
+
+            &.article {
+                margin: 0 auto;
+                padding: 30px 30px 0;
+                width: 560px;
+
+                h2 {
+                    font-family: "Arial Black", Gadget, sans-serif;
+                    font-size: 25px;
+                    font-weight: normal;
+                    margin: 0 0 30px;
+                }
+
+                h3 {
+                    /*mixins*/
+                    @include color(#252525);
+                    line-height: 24px;
+                    margin: 0;
+                    padding: 0;
+                }
+
+                h4 {
+                    background: #252525;
+                    /* mixins */
+                    @include color(#fff);
+                    display: inline-block;
+                    font-family: "Arial Black", Gadget, sans-serif;
+                    /*operator*/
+                    font-size: 1 * 25px;
+                    font-weight: normal;
+                    margin: 0 0 30px;
+                    padding: 8px 27px 10px;
+                }
+
+                p {
+                    margin: 0 0 30px;
+                }
+            }
+
+            ul {
+                margin: 0;
+                padding: 24px 10px 0;
+                width: 940px;
+
+                li {
+                    border: 2px solid #1a1a1a;
+                    display: block;
+                    list-style: none;
+                    margin: 0 0 13px;
+                    overflow: hidden;
+                    padding: 0;
+
+                    &.figure {
+                        border-right: 2px solid #1a1a1a;
+                        float: left;
+                        margin: 0;
+                        padding: 0;
+                        width: 376px;
+                    }
+
+                    img {
+                        border: 0;
+                        display: block;
+                        /* mixins */
+                        @include marginPanding(0px);
+                        opacity: 0.8;
+                        transition: 0.5s ease-in-out;
+
+                        &:hover {
+                            img {
+                                opacity: 1;
+                            }
+                        }
+                    }
+
+                    div {
+                        float: left;
+                        margin: 0;
+                        padding: 63px 0 20px;
+                        width: 558px;
+
+                        h3 {
+                            /* mixins */
+                            @include color(#252525);
+                            font-family: "Arial Black", Gadget, sans-serif;
+                            font-size: 25px;
+                            font-weight: normal;
+                            /* mixins */
+                            @include marginPanding(0px);
+                            text-transform: uppercase;
+                        }
+
+                        p {
+                            padding: 30px 30px 18px;
+                        }
+
+                        a {
+                            &.more {
+                                background: #000;
+                                /* mixins */
+                                @include color(#fff);
+                                display: inline-block;
+                                font-family: "Arial Black", Gadget, sans-serif;
+                                font-size: 18px;
+                                font-weight: normal;
+                                margin: 0;
+                                padding: 8px 28px;
+                                /* extend */
+                                @extend %none-decorator;
+                                text-transform: uppercase;
+
+                                &:hover {
+                                    /* mixins */
+                                    @include color(#252525);
+                                    background: #fff;
+                                    border: 2px solid #252525;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

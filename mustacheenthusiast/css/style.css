@@ -1,0 +1,266 @@
+/*Sass*/
+@use 'mobile';
+/*variables*/
+p a {
+  text-decoration: underline;
+}
+
+#header ul li a, #header #body > div ul li div a.more {
+  text-decoration: none;
+}
+
+body, #header ul li a {
+  font-weight: normal;
+}
+
+body {
+  background: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  /* extend */
+  font-size: 14px;
+  /* extend */
+  line-height: 1;
+  min-width: 960px;
+  /*mixins*/
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  /*mixins*/
+  color: #252525;
+  line-height: 24px;
+  /*mixins*/
+  margin: 0;
+  padding: 0;
+}
+
+p a {
+  /*mixins*/
+  color: #252525;
+  /*extends*/
+}
+
+p a:hover {
+  /*mixins*/
+  color: #898989;
+}
+
+#header {
+  margin: 0 auto;
+  padding: 44px 0 50px;
+  /*variable*/
+  text-align: center;
+  width: 960px;
+}
+
+#header a.logo {
+  display: block;
+  /* mixins*/
+  margin: 0;
+  padding: 0;
+  margin: auto;
+  width: 340px;
+}
+
+#header a.logo img {
+  border: 0;
+  display: block;
+  /* mixins*/
+  margin: 0;
+  padding: 0;
+}
+
+#header ul {
+  margin: 0;
+  padding: 56px 0 0;
+}
+
+#header ul li {
+  display: inline;
+  list-style: none;
+  margin: 0;
+  padding: 0 19px;
+}
+
+#header ul li.selected a {
+  /*mixing*/
+  color: #0ba39c;
+}
+
+#header ul li a {
+  /*mixing*/
+  color: #252525;
+  display: inline-block;
+  font-family: "Arial Black", Gadget, sans-serif;
+  /* variable */
+  font-size: 14px;
+  /* extends */
+  margin: 0;
+  padding: 0 0 3px;
+  /* extends */
+  text-transform: uppercase;
+}
+
+#header ul li a:hover {
+  color: #0ba39c;
+}
+
+#header #body {
+  margin: 0;
+  padding: 0 0 30px;
+  /*variable*/
+  text-align: center;
+}
+
+#header #body h1 {
+  /* mixins */
+  color: #fff;
+  display: inline;
+  font-family: poller_oneregular;
+  /*operator*/
+  font-size: 35px;
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+}
+
+#header #body h1 span {
+  background: #252525;
+  display: inline-block;
+  padding: 15px 28px 12px;
+}
+
+#header #body > div {
+  margin: 0 auto;
+  padding: 0;
+  width: 960px;
+}
+
+#header #body > div img {
+  border: 2px solid #292929;
+  margin: 24px 0 0;
+  padding: 0;
+}
+
+#header #body > div.article {
+  margin: 0 auto;
+  padding: 30px 30px 0;
+  width: 560px;
+}
+
+#header #body > div.article h2 {
+  font-family: "Arial Black", Gadget, sans-serif;
+  font-size: 25px;
+  font-weight: normal;
+  margin: 0 0 30px;
+}
+
+#header #body > div.article h3 {
+  /*mixins*/
+  color: #252525;
+  line-height: 24px;
+  margin: 0;
+  padding: 0;
+}
+
+#header #body > div.article h4 {
+  background: #252525;
+  /* mixins */
+  color: #fff;
+  display: inline-block;
+  font-family: "Arial Black", Gadget, sans-serif;
+  /*operator*/
+  font-size: 25px;
+  font-weight: normal;
+  margin: 0 0 30px;
+  padding: 8px 27px 10px;
+}
+
+#header #body > div.article p {
+  margin: 0 0 30px;
+}
+
+#header #body > div ul {
+  margin: 0;
+  padding: 24px 10px 0;
+  width: 940px;
+}
+
+#header #body > div ul li {
+  border: 2px solid #1a1a1a;
+  display: block;
+  list-style: none;
+  margin: 0 0 13px;
+  overflow: hidden;
+  padding: 0;
+}
+
+#header #body > div ul li.figure {
+  border-right: 2px solid #1a1a1a;
+  float: left;
+  margin: 0;
+  padding: 0;
+  width: 376px;
+}
+
+#header #body > div ul li img {
+  border: 0;
+  display: block;
+  /* mixins */
+  margin: 0;
+  padding: 0;
+  opacity: 0.8;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+
+#header #body > div ul li img:hover img {
+  opacity: 1;
+}
+
+#header #body > div ul li div {
+  float: left;
+  margin: 0;
+  padding: 63px 0 20px;
+  width: 558px;
+}
+
+#header #body > div ul li div h3 {
+  /* mixins */
+  color: #252525;
+  font-family: "Arial Black", Gadget, sans-serif;
+  font-size: 25px;
+  font-weight: normal;
+  /* mixins */
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+}
+
+#header #body > div ul li div p {
+  padding: 30px 30px 18px;
+}
+
+#header #body > div ul li div a.more {
+  background: #000;
+  /* mixins */
+  color: #fff;
+  display: inline-block;
+  font-family: "Arial Black", Gadget, sans-serif;
+  font-size: 18px;
+  font-weight: normal;
+  margin: 0;
+  padding: 8px 28px;
+  /* extend */
+  text-transform: uppercase;
+}
+
+#header #body > div ul li div a.more:hover {
+  /* mixins */
+  color: #252525;
+  background: #fff;
+  border: 2px solid #252525;
+}
+/*# sourceMappingURL=style.css.map */
