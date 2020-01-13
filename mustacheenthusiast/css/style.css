@@ -1,49 +1,6 @@
 /*Sass*/
-@use 'mobile';
-/*variables*/
-p a {
-  text-decoration: underline;
-}
-
-#header ul li a, #header #body > div ul li div a.more {
-  text-decoration: none;
-}
-
-body, #header ul li a {
+#header ul li a, body {
   font-weight: normal;
-}
-
-body {
-  background: #fff;
-  font-family: Arial, Helvetica, sans-serif;
-  /* extend */
-  font-size: 14px;
-  /* extend */
-  line-height: 1;
-  min-width: 960px;
-  /*mixins*/
-  margin: 0;
-  padding: 0;
-}
-
-p {
-  /*mixins*/
-  color: #252525;
-  line-height: 24px;
-  /*mixins*/
-  margin: 0;
-  padding: 0;
-}
-
-p a {
-  /*mixins*/
-  color: #252525;
-  /*extends*/
-}
-
-p a:hover {
-  /*mixins*/
-  color: #898989;
 }
 
 #header {
@@ -262,5 +219,83 @@ p a:hover {
   color: #252525;
   background: #fff;
   border: 2px solid #252525;
+}
+
+/*variables*/
+p a {
+  text-decoration: underline;
+}
+
+#header ul li a, #header #body > div ul li div a.more {
+  text-decoration: none;
+}
+
+#header ul li a, body {
+  font-weight: normal;
+}
+
+p {
+  /*mixins*/
+  color: #252525;
+  line-height: 24px;
+  /*mixins*/
+  margin: 0;
+  padding: 0;
+}
+
+p a {
+  /*mixins*/
+  color: #252525;
+  /*extends*/
+}
+
+p a:hover {
+  /*mixins*/
+  color: #898989;
+}
+
+p a {
+  text-decoration: underline;
+}
+
+#header ul li a, #header #body > div ul li div a.more {
+  text-decoration: none;
+}
+
+#header ul li a, body {
+  font-weight: normal;
+}
+
+body {
+  background: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  /* extend */
+  font-size: 14px;
+  /* extend */
+  line-height: 1;
+  min-width: 960px;
+  /*mixins*/
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  /*mixins*/
+  color: #252525;
+  line-height: 24px;
+  /*mixins*/
+  margin: 0;
+  padding: 0;
+}
+
+p a {
+  /*mixins*/
+  color: #252525;
+  /*extends*/
+}
+
+p a:hover {
+  /*mixins*/
+  color: #898989;
 }
 /*# sourceMappingURL=style.css.map */
